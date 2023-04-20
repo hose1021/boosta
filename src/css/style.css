@@ -1,0 +1,161 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    min-height: 100vh;
+}
+
+.block-left {
+    margin: 40px calc(25% + 140px) 40px 140px;
+}
+
+.block-right {
+    width: 25%;
+    padding: 40px;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    background: #F8F8F8;
+}
+
+.block-right-title {
+    color: #ABABAB;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.favorite-update-time, .favorite-id {
+    font-size: .75rem;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+}
+
+input[type="radio"] {
+    margin-right: 15px;
+    margin-top: 0;
+}
+
+label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+#category-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    display: inline-block;
+    color: #ABABAB;
+    border: 2px solid #F8F8F8;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 6px 15px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.category-tag.active {
+    background-color: #F8F8F8;
+    color: #333333;
+    font-weight: 500;
+}
+
+#search-input {
+    padding: 5px;
+    border: 2px solid #333333;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#get-joke-btn {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background: linear-gradient(90.55deg, #8EA7FF 0%, #7291FF 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#joke-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#favorites-container {
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .block-left {
+        margin: 40px 40px;
+    }
+
+    .block-right {
+        display: none;
+    }
+
+    .show {
+        display: block;
+        position: absolute;
+        width: 65%;
+    }
+
+    .show > .block-right-title {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .block-left {
+        margin: 40px 40px;
+    }
+
+    .block-right {
+        display: none;
+        height: 100%;
+        z-index: 5;
+    }
+
+    .show {
+        display: block;
+        position: absolute;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .show > .block-right-title {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .block-right-toggle {
+        display: none !important;
+    }
+}
